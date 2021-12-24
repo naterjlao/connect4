@@ -121,5 +121,6 @@ if __name__ == "__main__":
         board.move(turn, move)
         winner = board.winner()
         turn = Players.RED if turn == Players.BLUE else Players.BLUE
+    print(board)
     print(f"Winner: {'RED' if winner == Players.RED else 'BLUE'}")
     # TODO no stalemate case

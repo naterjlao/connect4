@@ -3,13 +3,13 @@ import sys
 from PySide2.QtWidgets import QApplication, QMainWindow
 
 
-class ui(QMainWindow):
+class Connect4(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
 
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = ui()
+    window = Connect4()
     window.show()
     sys.exit(app.exec_())
