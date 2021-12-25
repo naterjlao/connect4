@@ -1,5 +1,6 @@
 import sys
 import socket
+import pickle
 from config import Config
 
 HOST = None
@@ -13,4 +14,5 @@ if __name__ == "__main__":
         sock.connect((HOST,Config.PORT))
         sock.sendall(b'TESTING DATA FROM CLIENT')
         data = sock.recv(1024)
-        print('Got',repr(data))
+        #print('Got',repr(data))
+        print(pickle.loads(data))
